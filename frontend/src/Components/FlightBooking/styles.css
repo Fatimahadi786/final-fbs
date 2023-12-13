@@ -1,0 +1,52 @@
+/* styles.css */
+
+/* Container styling */
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading styling */
+  .heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Button styling */
+  .button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  /* Button hover effect */
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Text input field styling */
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Add more styles as needed for your React component */
+  

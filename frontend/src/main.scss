@@ -1,0 +1,591 @@
+// Let's import the fonts to use =>
+@import url("http://fonts.googleapis.com/css2?family=Montserrat:wght@500,700&family=Spartan:wght@300,400,500&display=swap");
+// You can find these fonts on Google
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+:root {
+    /* Colors */
+   /* Colors */
+   --primarycolor: hsl(255,50%,48%);
+   --secondarycolor:hsl(180,17%,95%);
+   --colorone:hsl(15,74%,70%);
+   --colortwo:hsl(28,100%,82%);
+   --hovercolor: hsl(225,56%,59%);
+   --whitecolor: hsl(0,0%,100%);
+   --blackcolor: hsl(0,0%,12%);
+   --textcolor: hsl(240,1%,48%);
+   --bordercolor: hsl(0,0%,83%);
+   --whitecolordream: hsl(0,0%,93%);
+   --greyBg: hsl(0,0%,96%);
+   --greytext: rgb(145,145,145);
+   --inputcolor: hsl(330,12%,97%);
+  
+    /* Box shadow */
+    --boxshadow: 0px 10px 15px -3px rgb(0, 0, 0), 0px 4px 6px -2px rgba(0, 0, 0, 0.5);
+  
+    /* Transition */
+    --transition: 0.4s ease-in-out;
+}
+
+// Default styling ======================
+
+body {
+    background: var(--whitecolor);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+}
+
+.section {
+    padding: 4rem 0 2rem;
+}
+
+.container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.icon {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    align-items: center;
+}
+
+.none {
+    display: none;
+}
+
+.btn {
+    padding: .7rem 1.5rem;
+    background: var(--primarycolor);
+    border: none;
+    outline: none;
+    border-radius: 3rem; 
+    cursor: pointer;
+    color: var(--whitecolor);
+
+    a {
+        color: var(--whitecolor);
+        font-weight: 500;
+    }
+    &:hover {
+        background: var(--hovercolor);
+    }
+}
+
+img, video {
+    width: 20%;
+    height: auto;
+}
+
+input {
+    font-size: 100%;
+    color: var(--greytext);
+}
+
+p {
+    font-size: 13px;
+    color: var(--greytext);
+    line-height: 22px;
+}
+
+h4 {
+    padding: 1rem 0;
+    font-weight: 700;
+    color: var(--blackcolor);
+}
+
+h2 {
+    font-size: 25px;
+    padding: 1rem 0;
+    color: var(--blackcolor);
+}
+
+// This is all for the default style - we shall see later how each gets into play :)
+
+// Media Screen Styling===================>
+@media screen and (min-width:480px) {
+    // Home section styling =============>
+    .home{
+        padding-top: 12rem;
+    }
+    // search section styling =============>
+    .search{
+        .sectionContainer{
+            .searchInputs{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+    // Traveler section styling =============>
+    .travelers{
+        .sectionContainer{
+            .travelersContainer{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+    // Subscribe section styling =============>
+    .subscribe{
+        .sectionContainer{
+            max-width: 80%;
+            margin: auto;
+
+            .inputDiv{
+                flex-direction: row;
+                padding: 0 .5rem;
+                border-radius: 3rem;
+            }
+        }
+    }
+    // Footer section styling =============>
+    .footer{
+        .sectionContainer{
+            align-items: flex-start;
+            grid-template-columns: repeat(2, 1fr);
+
+            .footerLinks{
+                justify-content: center;
+            }
+        }
+    }
+
+
+}
+
+@media screen and (min-width:570px){
+   // Home Screen Styling===================>
+   .home{
+    .mainText{
+        width: 80%;
+    }
+    .homeImages{
+        .video{
+            border-radius: 15rem;
+        }
+
+        .plane{
+            position: absolute;
+            width: 95%;
+            top: -8%;
+        }
+    }
+   }  
+   // Search section styling===========================>
+   .search{
+    .sectionContainer{
+        .btns{
+            border-radius: 3rem;
+            flex-direction: row;
+        }
+       
+    }
+}
+ // Support section styling===========================>
+ .support{
+    .sectionContainer{
+        .infoDiv{
+            .textDiv{
+                margin-top: 2rem;
+                grid-template-columns: repeat(2,1fr);
+
+            }
+        }
+    }
+ }
+  // Info section styling===========================>
+  .info{
+    .infoContainer{
+        .titlesDiv{
+            flex-direction: row;
+            h2{
+                text-align: left;
+                max-width: 500px;
+            }
+        }
+        .cardDiv{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+  }
+  //Lounge section styling===========================>
+  .lounge{
+    .sectionContainer{
+        .textDiv{
+            .grids{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+    }
+  }
+  // Subscribe section styling===========================>
+  .subscribe{
+    .sectionContainer{
+
+        .inputDiv{
+           justify-content: space-between;
+
+           .btn{
+            min-width: max-content;
+
+           }
+        }
+    }
+}
+  // Footer section styling--================>
+.footer{
+    .sectionContainer{
+        padding-top: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+
+        
+       }
+    }
+}
+@media screen and (min-width:680px) {
+     // Home section styling =============>
+     .home{
+        .mainText{
+            width: 80%;
+        }
+        .homeImages{
+            .videoDiv{
+                width: 80%;
+                .video{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 15rem;
+                }
+            }
+            .plane{
+                width: 75%;
+                top: -8%;
+            }
+        }
+    }
+    // Search section styling =================>
+    .search{
+        .sectionContainer{
+            .btn{
+                border-radius: 3rem;
+                flex-direction: row;
+            }
+            .searchInputs{
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+    .footer{
+        .sectionContainer{
+            grid-template-columns: repeat(4, 1fr);
+
+           
+        }
+    }
+
+}
+@media screen and (min-width:769px){
+    .toggleNavbar, .closeNavbar{
+        display: none;
+    }
+    .header{
+        padding: 1.5rem 2rem;
+
+        .navBar,.navLists{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+
+                .navItem{
+                    .navLink{
+                        color: var(--textcolor);
+                        padding: 5rem;
+                        font-size: 0.9rem;
+                        font-weight: 500;
+
+                        &:hover{
+                            color: var(--primarycolor);
+
+                        }
+                    }
+
+                }
+
+            }
+        }
+    
+     // Search section styling====================>
+     .search{
+        .sectionContainer{
+            .btns{
+                width: 70%;
+                border-radius: 3rem;
+                flex-direction: row;
+            }
+            .searchInputs{
+                grid-template-columns: repeat(4, 1fr);
+
+                .searchInputs{
+                    .texts{
+                        input{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+     // Support section styling====================>
+     .support{
+        .sectionContainer{
+            .infoDiv{
+                grid-template-columns: repeat(2,1fr);
+                gap: 2rem;
+                margin-top: 5rem;
+                .textDiv{
+                    margin-top: 0rem;
+                    grid-template-columns: repeat(1,1fr);
+                }
+            }
+        }
+     }
+       // Info section styling====================>
+       .info{
+        .infoContainer{
+            padding: 0 6rem;
+            .titlesDiv{
+                width: 90%;
+                margin: auto;
+                align-items: center;
+            }
+            .cardDiv{
+                grid-template-columns: repeat(3,1fr);
+
+                .singleCard{
+                    max-width: 260px;
+                    padding: 3rem 1rem;
+
+                }
+            }
+        }
+      }
+       // Lounge section styling====================>
+       .lounge{
+        .sectionContainer{
+            grid-template-columns: repeat(2,1fr);
+            .textDiv{
+                grid-area: 1;
+                .grids{
+                    grid-template-columns: repeat(2,1fr);
+                }
+            }
+        }
+      }
+        // Travelers section styling====================>
+        .travelers{
+            .sectionContainer{
+                .travelersContainer{
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+        }
+}
+@media screen and (min-width:960px){
+     // Home section styling =============>
+     .home{
+        padding-top: 13rem;;
+        .mainText{
+            width: 70%;
+            padding-bottom: 1rem;
+            font-size: 22px;
+            line-height: 4rem;
+        } 
+    }
+     // Search section styling =================>
+     .search{
+        .sectionContainer{
+           
+            .searchInputs{
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+    }
+     // Travelers section styling====================>
+     .travelers{
+        .sectionContainer{
+            .travelersContainer{
+                grid-template-columns: repeat(4, 1fr);
+                margin: 3rem 0;
+
+            }
+        }
+    }
+    
+}
+@media screen and (min-width:1024px){
+    //default styling ======================>
+    
+p {
+    font-size: 15px;
+    line-height: 25px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 27px;
+ 
+}
+.section{
+    padding: 6rem 0.4rem;
+}
+.container{
+  width: 75%;
+  margin: auto;
+
+}
+ //Navbar section styling====================>
+ .navBar{
+   .navBarTwo{
+    padding: 1.5rem 5rem;
+   }
+   .navbar_with_Bg{
+    padding: 0.5rem;
+
+   }
+ }
+  //Home section styling====================>
+  .home{
+    .mainText{
+        width: 60%;
+        font-size: 25px;
+        line-height: 4rem;
+    }
+    .homeImages{
+        .videoDiv{
+            width: 90%;
+            height: 300px;
+
+
+            .video{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 15rem;
+            }
+        }
+        .plane{
+            width: 100%;
+            top: -10%;
+        }
+    }
+}
+ //Search section styling====================>
+ .search{
+    .sectionContainer{
+        .btns{
+            width: 50%;
+
+
+        }
+    }
+ }
+}
+@media screen and (min-width:1106px){
+    .subscribe{
+        .sectionContainer{
+            max-width: 60%;
+            margin: auto;
+
+        }
+    }
+}
+@media screen and (min-width:1332px){
+    .navBar{
+        .navBarTwo{
+        .menu{
+            gap: 1rem;
+
+            .listItem{
+                padding: 0 1.5rem;
+                font-size: 14px;
+            }
+
+        }
+        }
+       
+      }
+      // Support section styling====================>
+     .support{
+        .sectionContainer{
+            .infoDiv{
+               
+                gap: 1rem;
+                
+                .textDiv{
+                   .singleInfo{
+                    p{
+                        max-width: 500px;
+
+                    }
+                   }
+                }
+            }
+        }
+     }
+     .subscribe{
+        .sectionContainer{
+            max-width: 50%;
+          
+
+        }
+    }
+}
+@media screen and (min-width:1440px){
+    .home{
+        .homeImages{
+            .plane{
+                width: 90%;
+                top: -10%;
+            }
+        }
+    }
+}
+::selection{
+    background: var(--primarycolor);
+    color:var(--whitecolor);
+}
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: var(--greyBg);
+    
+}
+::-webkit-scrollbar-thumb{
+    background: var(--primarycolor);
+    border-radius: 10px;
+}

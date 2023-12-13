@@ -1,0 +1,134 @@
+:root {
+    /* Colors */
+   /* Colors */
+   --primarycolor: hsl(255,50%,48%);
+   --secondarycolor:hsl(180,17%,95%);
+   --colorone:hsl(15,74%,70%);
+   --colortwo:hsl(28,100%,82%);
+   --hovercolor: hsl(225,56%,59%);
+   --whitecolor: hsl(0,0%,100%);
+   --blackcolor: hsl(0,0%,12%);
+   --textcolor: hsl(240,1%,48%);
+   --bordercolor: hsl(0,0%,83%);
+   --whitecolordream: hsl(0,0%,93%);
+   --greyBg: hsl(0,0%,96%);
+   --greytext: rgb(145,145,145);
+   --inputcolor: hsl(330,12%,97%);
+  
+    /* Box shadow */
+    --boxshadow: 0px 10px 15px -3px rgb(0, 0, 0), 0px 4px 6px -2px rgba(0, 0, 0, 0.5);
+  
+    /* Transition */
+    --transition: 0.4s ease-in-out;
+}
+// Traveler section styling======================>
+.travelers{
+    .sectionContainer{
+        margin: -100px;
+        text-align: center;
+
+        
+        .travelersContainer{
+            margin-top: 1rem;
+            gap: 1.5 rem;
+            
+            .singleTraveler{
+                position: relative;
+                height: 320px;
+                width: 85%;
+                max-width: 250px;
+                overflow: hidden;
+                border-radius: 10rem;
+                border:3px solid rgb(244, 160, 14);
+                gap: 1rem;
+                margin: auto;
+                margin-bottom: 20px;
+                
+                
+                .destinationImage, .travelerImage,.travelerName{
+                    position: absolute;
+                }
+                    .destinationImage{
+                        height: 100%;
+                        width: 100%;
+                        top: 0;
+                        right: 0;
+                        left: 0;
+                        bottom: 0;
+                        object-fit: cover;
+                    }
+
+                        .travelerImage{
+                            height: 50px;
+                            width: 50px;
+                            object-fit: cover;
+                            border-radius: 50%;
+                            bottom: 30px;
+                            left: 40%;
+                            transform: translateX(-50%);
+                            border: 5px solid rgba(255, 255,255, 0.6);
+                            transition: var(--transition);
+                            animation: animated 2.3s infinite;
+
+                        }
+                    @keyframes animated {
+                        0%{
+                            transform: translateY(0px);
+                        }
+                        50%{
+                            transform: translateY(8px);
+                        }
+                        100%{
+                            transform: translateY(0px);
+                        }
+                       
+                    }
+                    .travelerName{
+                        bottom: -100;
+                        width: 100%;
+                        height: max-content;
+                        background: var(--whitecolor);
+                        padding: 1rem 1rem;
+                        transition: var(--transition);
+                        animation: animatedBorders 2.3s infinite;
+                        span{
+                            display: block;
+                            color: black;
+                            font-weight: 700;
+
+                        }
+                        p{
+                            color: var(--primarycolor);
+                            font-style: italic;
+                        }
+                    }
+                    @keyframes animatedBorders {
+                        0%{
+                            border-radius: 0rem;
+                        }
+                        50%{
+                            border-radius: 2rem;
+                        }
+                        100%{
+                            border-radius: 0rem;
+                        }
+                        
+                        
+                    }
+                    &:hover{
+                        .travelerName{
+                            bottom: 0;
+                            transition: 1s ease-in-out;
+
+                        }
+                        .travelerImage{
+                            bottom: 110px;
+                            transition: 1s ease-in-out;
+                        }
+
+                    }
+             }
+
+         }
+     }
+}

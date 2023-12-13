@@ -1,0 +1,101 @@
+:root {
+    /* Colors */
+   /* Colors */
+   --primarycolor: hsl(255,50%,48%);
+   --secondarycolor:hsl(180,17%,95%);
+   --colorone:hsl(15,74%,70%);
+   --colortwo:hsl(28,100%,82%);
+   --hovercolor: hsl(225,56%,59%);
+   --whitecolor: hsl(0,0%,100%);
+   --blackcolor: hsl(0,0%,12%);
+   --textcolor: hsl(240,1%,48%);
+   --bordercolor: hsl(0,0%,83%);
+   --whitecolordream: hsl(0,0%,93%);
+   --greyBg: hsl(0,0%,96%);
+   --greytext: rgb(145,145,145);
+   --inputcolor: hsl(330,12%,97%);
+  
+    /* Box shadow */
+    --boxshadow: 0px 10px 15px -3px rgb(0, 0, 0), 0px 4px 6px -2px rgba(0, 0, 0, 0.5);
+  
+    /* Transition */
+    --transition: 0.4s ease-in-out;
+}
+// Footer section styling ====================>
+.footer{
+    background: var(--secondarycolor);
+    .sectionContainer{
+        gap: 2.5rem;
+
+
+        .gridOne{
+            gap: 1rem;
+            justify-content: center;
+            margin: auto;
+
+            .logoDiv{
+                .Logo{
+                    width: 30%;
+                    height: auto;
+
+                }
+            }
+            .socialIcon{
+                margin-top: 1rem;
+                gap: 1rem;
+                
+                .icon{
+                    width: 30px;
+                    height: 50px;
+                    border-radius: 3rem;
+                    border: 1px solid var(--bordercolor);
+                    box-shadow: var(--boxshadow);
+                    padding: .4rem;
+                    color:var(--greytext);
+
+                    &:hover{
+                        background: var(--primarycolor);
+                        transform: translateY(-7px);
+                        transition: var(--transition);
+                        border: 1px solid var(--primarycolor);
+                        color: var(--whitecolor);
+                    }
+                }
+            }
+        }
+        .footerLinks{
+            display: grid;
+
+            .linkTitle{
+                color: var(--blackColor);
+                font-weight: 500;
+                display: block;
+                padding-bottom: 1rem;
+
+            }
+            li a{
+                display: block;
+                color: var(--greytext);
+               
+                transition: var(--transition);
+                padding: .3rem 0;
+
+
+                &:hover{
+                    transform: translateX(7px);
+                    //color: var(--primarycolor);
+                   
+                 
+                }
+            }
+        }
+    }
+    .copyRightDiv{
+        justify-content: center;
+        margin-top: 1.5rem;
+        padding: 1rem;
+        gap: 1rem;
+        border-top: 1px solid var(--greytext);
+        text-align: center;
+    }
+}

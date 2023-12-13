@@ -1,0 +1,83 @@
+/* FlightInfo.css */
+
+/* Style for the entire card container */
+.flightCard {
+  /* Define styles for the entire card container here */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* Styles for the flight logo */
+.FlightLogo {
+  max-width: 150px;
+  height: 150px;
+  margin-right: 100px;
+ 
+}
+.flight {
+  max-width: 150px;
+  height: 150px;
+  margin-right: 200px;
+  margin-left: 100px;
+ 
+}
+
+/* Styles for text1 and text2 */
+.text1,
+.text2 {
+  /* Define common styles for text1 and text2 here */
+  margin-left: 100px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex; /* Add display: flex */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  flex-direction: column;
+}
+
+
+/* Styles for the accordion */
+.accordion {
+  /* Define styles for the accordion here */
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .AccordionSummary {
+    /* Define styles for the summary within the accordion */
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+
+   
+  }
+
+  .AccordionDetails {
+    /* Define styles for the details within the accordion */
+    padding: 15px;
+  }
+}
+/* YourStyles.css */
+
+.arrow-icon {
+  color: #007bff; /* Set your desired color */
+  font-size: 54px; /* Set your desired font size */
+  margin-right: 50px; /* Set your desired bottom margin */
+  margin-left: 50px; 
+  margin-top: 50px;/* Set your desired bottom margin */
+  /* Add any additional styles as needed */
+}
+
+/* Adjust and add more styles as needed */

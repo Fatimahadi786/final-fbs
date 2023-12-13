@@ -1,0 +1,133 @@
+/* Remove the border from the main container */
+.booking {
+  margin: 0.50px 50px;
+  padding: 10px;
+  background-color: white; /* Use the color name 'white' */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.abccontainer {
+  width: 10%;
+  margin-left: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  border: none; /* Remove the border */
+}
+
+/* Style for the select container */
+.selectContainer {
+  flex: 1;
+  margin: 10px;
+}
+
+/* Style for the select element */
+.select {
+  width: 100%;
+  padding: 1px;
+  border: none; /* Remove the border */
+  border-radius: 5px;
+  /* background-color: #fff; */
+}
+
+/* Style for the menu items within the select */
+.menuItem {
+  display: flex;
+  align-items: center;
+  color: #333;
+}
+
+/* Style for the image inside menu items */
+.menuItem img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Additional styles for specific menu items */
+.menuItem[value="economy"] {
+  background-color: #c6e2ff;
+}
+
+.menuItem[value="business"] {
+  background-color: #ffeb99;
+}
+
+.menuItem[value="first"] {
+  background-color: #ffd6cc;
+}
+/* Styling for the container */
+
+.guestType {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+ 
+}
+
+/* Styling for the label */
+.guestType label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Styling for the counter */
+.guestType .counter {
+  display: flex;
+  align-items: center;
+}
+
+/* Styling for the buttons */
+.guestType .button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+}
+
+.guestType .button:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the count */
+.guestType .count {
+  font-size: 18px;
+  margin: 0 10px;
+}
+
+
+/* Style for the Typography */
+Typography {
+  font-weight: bold;
+}
+
+.container {
+  margin-bottom: 20px;
+  gap: 30px;
+}
+
+.container .IconDiv {
+  width: 15%;
+  height: 15%;
+}
+
+/* Style for the "Add multicity" button within the .booking class */
+.booking .flightbtn {
+  margin-left: 30px;
+  gap: 30px;
+  justify-content: center;
+  background-color: white;
+  color: #2686e8;
+  border: 2px solid #2686e8;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}

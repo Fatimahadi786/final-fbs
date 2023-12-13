@@ -1,0 +1,160 @@
+:root {
+    /* Colors */
+   /* Colors */
+   --primarycolor: hsl(255,50%,48%);
+   --secondarycolor:hsl(180,17%,95%);
+   --colorone:hsl(15,74%,70%);
+   --colortwo:hsl(28,100%,82%);
+   --hovercolor: hsl(225,56%,59%);
+   --whitecolor: hsl(0,0%,100%);
+   --blackcolor: hsl(0,0%,12%);
+   --textcolor: hsl(240,1%,48%);
+   --bordercolor: hsl(0,0%,83%);
+   --whitecolordream: hsl(0,0%,93%);
+   --greyBg: hsl(0,0%,96%);
+   --greytext: rgb(145,145,145);
+   --inputcolor: hsl(330,12%,97%);
+  
+    /* Box shadow */
+    --boxshadow: 0px 10px 15px -3px rgb(0, 0, 0), 0px 4px 6px -2px rgba(0, 0, 0, 0.5);
+  
+    /* Transition */
+    --transition: 0.4s ease-in-out;
+}
+.home{
+  
+    height: 90vh;
+    background: linear-gradient(rgba(33,33,33,0.522),rgba(33,33,33,0.522)), url('../Images/rinor.jpg');
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+.secContainer{
+    .homeText{
+        //   margin-top: -200px;
+        text-align: center;
+
+        .title{
+            color: var(--whitecolor);
+            font-size: 2rem;
+            font-weight: 700;
+            list-style: 2.5rem;
+        }
+        .subTitle{
+            color: var(--whitecolor);
+            opacity: .9;
+            font-size: 13px;
+            font-weight: 300;
+            padding: 1rem 0;
+            max-width: 70%;
+            text-align: center;
+            margin: auto;
+        }
+        .btn{
+            padding: .6rem 1.5rem;
+        }
+
+
+    }
+    .homeCard{
+        width: 80%;
+        border-radius: 1rem;
+        padding: 2rem;
+        background: var(--whitecolor);
+        position: absolute;
+        gap: 1rem;
+        justify-content: center;
+        bottom: -35%;
+        transform: translate(-50%);
+        left: 50%;
+        box-shadow: 0px 10px 15px -3px rgb(0, 0, 0), 0px 4px 6px -2px rgba(0, 0, 0, 0.5);
+
+    }
+
+
+
+
+
+    ///search
+    .btns{
+        background: var(--secondarycolor);
+        padding: .5rem;
+        border-radius: 1rem;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+
+        .singleBtn{
+            padding: .8rem 1.5rem;
+            font-size: 13px;
+            border-radius: 3rem;
+            width: 80%;
+            text-align: center;
+            cursor: pointer;
+
+            &:hover{
+                background: var(--primarycolor);
+                color: var(--whitecolor);
+                font-weight: 500;
+                transition: .4s ease-in-out;
+            }
+        }
+        .active{
+            background: var(--primarycolor);
+            color: var(--whitecolor);
+            font-weight: 500;
+        }
+    }
+    .searchInputs{
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1.5rem;
+        
+
+
+        .singleInput{
+            .iconDiv{
+                padding: 16px 10px;
+                border-radius: 3rem;
+                background: var(--secondarycolor);
+                margin-right: 1rem;
+
+                .icon{
+                    color: var(--blackcolor);
+                    opacity: .7;
+                }
+            }
+            .texts{
+                h4{
+                    padding-top: 0;
+                    padding-bottom: .7rem;
+                    color: var(--blackcolor);
+                    font-weight: 700;
+                }
+                input{
+                    width: 95%;
+                    border: none;
+                    outline: none;
+                    background: transparent;
+
+                    &::placeholder{
+                        font-size: 12px;
+                        opacity: .5;
+                    }
+                }
+            }
+        }
+        .btnBlock{
+            justify-content: center;
+           
+        }
+
+    
+}
+}

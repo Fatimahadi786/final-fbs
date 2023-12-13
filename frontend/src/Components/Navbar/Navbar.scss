@@ -1,0 +1,241 @@
+:root {
+    /* Colors */
+   /* Colors */
+   --primarycolor: hsl(255,50%,48%);
+   --secondarycolor:hsl(180,17%,95%);
+   --colorone:hsl(15,74%,70%);
+   --colortwo:hsl(28,100%,82%);
+   --hovercolor: hsl(225,56%,59%);
+   --whitecolor: hsl(0,0%,100%);
+   --blackcolor: hsl(0,0%,12%);
+   --textcolor: hsl(240,1%,48%);
+   --bordercolor: hsl(0,0%,83%);
+   --whitecolordream: hsl(0,0%,93%);
+   --greyBg: hsl(0,0%,96%);
+   --greytext: rgb(145,145,145);
+   --inputcolor: hsl(330,12%,97%);
+  
+    /* Box shadow */
+    --boxshadow: 0px 10px 15px -3px rgb(0, 0, 0), 0px 4px 6px -2px rgba(0, 0, 0, 0.5);
+  
+    /* Transition */
+    --transition: 0.4s ease-in-out;
+}
+.header{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--whitecolordream);
+    width: 100%;
+    height: 15%;
+    padding: 0rem;
+    z-index: 1000;
+    
+
+    // 
+    @media screen and (max-width:768px) {
+        .navBar{
+            position: absolute;
+            background: var(--whitecolordream);
+            height: max-content;
+            width: 80%;
+            border-radius: 1rem;
+            top: -500rem;
+            left: 50%;
+            padding: 1rem;
+            z-index: 2000;
+            transform: translate(-50%);
+            box-shadow: 0 2px 4px rgba(16, 18, 19, 0.904);
+            transition: .5s ease-in-out;
+
+            .navLists{
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                margin: auto;
+                padding: .5rem 0;
+
+                .navItem{
+                    padding: .5rem 0;
+
+                    .navLink{
+                        color: var(--textcolor);
+                        font-size: .9rem;
+                        font-weight: 600;
+                        &:hover{
+                            color: var(--primarycolor);
+                        }
+                    }
+                }
+                .headerBtns{
+                    flex-direction: column;
+                    .btn{
+                        margin-top: 1rem;
+                        
+                        a{
+                            font-weight: 600;
+                            color: var(--whitecolor);
+    
+                        }
+                    }
+                    .loginBtn{
+                        background: none;
+                        border: 1px solid var(--primarycolor);
+                        a{
+                            color: var(--primarycolor);
+                        }
+                    }
+                }
+            }
+            .closeNavbar{
+                position: absolute;
+                top: 1rem;
+                right: 1.5rem;
+                color: var(--primarycolor);
+
+                &:hover{
+                    color: rgb(244, 160, 14);
+                }
+            }
+
+        } 
+        .activeNavbar{
+            top: 7rem;
+
+        }
+        
+    }
+
+  .toggleNavbar{
+    .icon{
+        font-size: 25px;
+        color: var(--primarycolor);
+    }
+    &:hover.icon{
+        color:  rgb(244, 160, 14);
+
+
+    }
+  } 
+ 
+
+}
+@media screen and (min-width:769px) {
+    .toggleNavbar, .closeNavbar{
+        display: none;
+    }
+    .header {
+        padding: .0.5rem .0.5rem;
+        // border:2px solid gold;
+
+        .navBar{
+            .navLists{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+
+                .navItem{
+                    .navLink{
+                        color: var(--textcolor);
+                        padding: 0 0.45rem;
+                        font-size: 0.9rem;
+                        font-weight: 500;
+
+                        &:hover{
+                            color: var(--primarycolor);
+
+                        }
+                    }
+
+                }
+
+            }
+        }
+        }
+}
+@media screen and (min-width:769px) {
+    .toggleNavbar, .closeNavbar{
+        display: none;
+    }
+    .navBar{
+
+        .navLists{
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+            margin: auto;
+            padding: 10px;
+
+            .navItem{
+                padding: 15px;
+
+                .navLink{
+                    color: var(--textcolor);
+                    font-size: .9rem;
+                    font-weight: 600;
+                    &:hover{
+                        color: var(--primarycolor);
+                    }
+                }
+            }
+            .headerBtns{
+                .btn{
+                    margin-top: 1rem;
+                    margin-top:-10px;
+                    a{
+                        font-weight: 600;
+                        color: var(--whitecolor);
+                     
+
+                    }
+                }
+                .loginBtn{
+                    background: none;
+                    border: 1px solid var(--primarycolor);
+                    margin-right: 10px;
+                    a{
+                        color: var(--primarycolor);
+                    }
+                }
+            }
+        }
+       
+    } 
+    .activeNavbar{
+        top: 7rem;
+
+    }
+    
+}
+/* Navbar.scss */
+
+.navBarSection {
+    background-color: #fff; /* Set the background color of the navbar section */
+    padding: 1px; /* Add padding as needed */
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logoDiv {
+    margin-right: 200px; /* Adjust the margin as needed for spacing */
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    max-width: 1000px; 
+    height: 1000px;/* Set the maximum width of the logo as needed */
+    height: auto; /* Allow the height to adjust proportionally */
+    margin-bottom: -80px;
+  }
+  
+  /* Rest of your styles for navLists, navItem, navlink, closeNavbar, toggleNavbar, etc. */
+  
+  
+
+

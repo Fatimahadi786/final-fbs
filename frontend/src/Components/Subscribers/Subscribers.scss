@@ -1,0 +1,54 @@
+:root {
+    /* Colors */
+   /* Colors */
+   --primarycolor: hsl(255,50%,48%);
+   --secondarycolor:hsl(180,17%,95%);
+   --colorone:hsl(15,74%,70%);
+   --colortwo:hsl(28,100%,82%);
+   --hovercolor: hsl(225,56%,59%);
+   --whitecolor: hsl(0,0%,100%);
+   --blackcolor: hsl(0,0%,12%);
+   --textcolor: hsl(240,1%,48%);
+   --bordercolor: hsl(0,0%,83%);
+   --whitecolordream: hsl(0,0%,93%);
+   --greyBg: hsl(0,0%,96%);
+   --greytext: rgb(145,145,145);
+   --inputcolor: hsl(330,12%,97%);
+  
+    /* Box shadow */
+    --boxshadow: 0px 10px 15px -3px rgb(0, 0, 0), 0px 4px 6px -2px rgba(0, 0, 0, 0.5);
+  
+    /* Transition */
+    --transition: 0.4s ease-in-out;
+}
+// Subscribe section styling ==================>
+.subscribe{
+    background: var(--secondarycolor);
+
+    .sectionContainer{
+        text-align: center;
+        
+        .inputDiv{
+            margin-top: 1rem;
+            flex-direction: column;
+            background: var(--whitecolor);
+            border-radius: 1rem;
+
+            input{
+                border: none;
+                outline: none;
+                background: transparent;
+                padding: 1rem .5rem;
+
+                &::placeholder{
+                    font-size: 13px;
+                    opacity: .5;
+                    
+                }
+            }
+            .btn{
+                width: 100%;
+            }
+        }
+    }
+}
