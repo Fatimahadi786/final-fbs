@@ -1,0 +1,143 @@
+/* pdf.css */
+
+.flight-ticket {
+  padding: 20px;
+  margin: 20px;
+}
+
+.letterhead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.letterhead img {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.letterhead div {
+  text-align: right;
+}
+
+.letterhead h6 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold; /* Make company name bold for emphasis */
+}
+
+.route {
+  font-style: italic;
+  color: #555;
+}
+
+.ticket-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow content to wrap to the next line on smaller screens */
+  margin-bottom: 20px;
+}
+
+.flight-info {
+  display: flex;
+  width: 100%;
+}
+
+.left-info,
+.right-info {
+  width: 48%; /* Adjust the width as needed */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.left-info {
+  margin-right: 4%; /* Add some space between left and right info */
+}
+
+.flight-info > div span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.passenger-list {
+  margin-top: 10px;
+}
+
+.passenger-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.passenger-table th,
+.passenger-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Add other styles as needed */
+/* ... (existing styles) */
+/* Your existing CSS... */
+
+.ticket-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.flight-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.info-item {
+  flex-basis: calc(33.33% - 10px); /* 33.33% width with 10px spacing between items */
+  margin-bottom: 10px;
+}
+
+/* Your remaining CSS... */
+.flight-info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.flight-info-table th,
+.flight-info-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Your other styles... */
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Container Styles */
+p {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Heading Styles */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Signature Styles */
+.signature {
+  font-style: italic;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 20px;
+}

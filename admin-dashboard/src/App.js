@@ -41,9 +41,8 @@ function App() {
         <Route path="addFlight" element={<CreateFlightForm />} />
         <Route path="booking-list" element={<BookingList />} />
         <Route path="cancel-flight" element={<FlightNotification/>} />
-        {/* <Route path="pdf/:id" element={<PDF />} /> */}
-        <Route path="pdf/:id" element={<PDF/>}/>
-      </Route>
+        </Route>
+      <Route path="/pdf/:id" element={<PDF />} />
     </Routes>
   );
 }

@@ -65,11 +65,7 @@ const BookingInfo = ({ formData, updateFormData, nextStep }) => {
     }
   };
 
-  const handleInfantChange = (value) => {
-    if (infants + value >= 0) {
-      setInfants(infants + value);
-    }
-  };
+  
   const handleInputChange = () => {
     setOpenOption(!openOption);
   };
@@ -90,7 +86,6 @@ const BookingInfo = ({ formData, updateFormData, nextStep }) => {
       flightType,
       adults,
       children,
-      infants,
       openOption,
       flightClass,
       paymentMethod,
@@ -300,27 +295,7 @@ const BookingInfo = ({ formData, updateFormData, nextStep }) => {
                   </Button>
                 </Box>
               </MenuItem>
-              <MenuItem className="guestType">
-                <Typography>Infants:</Typography>
-                <Box className="counter">
-                  <Button
-                    className="button"
-                    disabled={infants === 0}
-                    onClick={() => setInfants(infants - 1)}
-                  // onClick={() => formik.setFieldValue("number_of_infants", formik.values.number_of_infants - 1)}
-                  >
-                    -
-                  </Button>
-                  <Typography className="count">{infants}</Typography>
-                  <Button
-                    className="button"
-                    onClick={() => setInfants(infants + 1)}
-                  // onClick={() => formik.setFieldValue("number_of_infants", formik.values.number_of_infants + 1)}
-                  >
-                    +
-                  </Button>
-                </Box>
-              </MenuItem>
+              
             </Select>
             <Button className="button" onClick={handleBookingSubmit}>test</Button>
           </FormControl>

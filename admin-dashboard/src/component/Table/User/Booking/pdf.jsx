@@ -1,5 +1,9 @@
+
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import './pdf.css';
+import PIALogo from "./pia.jpg";
+import Rinor  from './LOGO2.png';
 import axios from 'axios';
 import {
   List,
@@ -13,7 +17,7 @@ function PDF() {
   const [bookingList, setBookingList] = useState([]);
   const [flightList, setFlightList] = useState([]);
   const [isLoading, setLoading] = useState(true);
-  const [error, setError] = useState(null); // New state for error handling
+  const [error, setError] = useState(null);
   const { id } = useParams();
 
   const apiUrl = 'http://localhost:8800/api/booking/bookings';
@@ -39,27 +43,23 @@ function PDF() {
       setLoading(false);
     } catch (error) {
       console.error('Error fetching bookings:', error);
-      setError('Error fetching bookings. Please try again.'); // Set error state
+      setError('Error fetching bookings. Please try again.');
       setLoading(false);
     }
   };
 
-  // Loading state
   if (isLoading) {
     return <div>Loading...</div>;
   }
 
-  // Error state
   if (error) {
     return <div>Error: {error}</div>;
   }
 
-  // Render FlightTicket component with data
   return <FlightTicket data={bookingList} flight={flightList} />;
 }
 
 function FlightTicket({ data, flight }) {
-  // Check if data exists and is not empty
   if (!data || data.length === 0) {
     return <div>No data available</div>;
   }
@@ -83,53 +83,120 @@ function FlightTicket({ data, flight }) {
     adults,
     children,
     passengers,
-  } = data[0]; // Assuming data is an array with one booking object
+  } = data;
+  const totalAdultFare = adultFare * adults;
+  const totalChildFare = childFare * children;
+  const totalFare = totalAdultFare + totalChildFare;
+
 
   return (
-    <Paper elevation={3} style={{ padding: '20px', margin: '20px' }}>
-      <Typography variant="h5">Flight Ticket</Typography>
-      <Typography>Flight ID: {flight_id}</Typography>
-      <Typography>PNR Number: {_id}</Typography>
-      <Typography>Company: {company}</Typography>
-      <Typography>Origin: {origin}</Typography>
-      <Typography>Destination: {destination}</Typography>
-      <Typography>Journey Date: {journeyDate}</Typography>
-      <Typography>Journey Time: {journeyTime}</Typography>
-      <Typography>Return Date: {returnDate}</Typography>
-      <Typography>Arrival Time: {arrivalTime}</Typography>
-      <Typography>Duration: {hour} hours</Typography>
-      <Typography>Flight Type: {flightType}</Typography>
-      <Typography>Flight Class: {flightClass}</Typography>
-      <Typography>Adult Fare: ${adultFare}</Typography>
-      <Typography>Child Fare: ${childFare}</Typography>
-      <Typography>Number of Adults: {adults}</Typography>
-      <Typography>Number of Children: {children}</Typography>
+    <Paper elevation={3} className="flight-ticket">
+      <div className="letterhead">
+        <img src={Rinor} alt="PIA Logo" />
+        <div>
+          <Typography variant="h6">{company}</Typography>
+          <Typography className="route"><h6>{origin} to {destination}</h6></Typography>
+        </div>
+        
+      </div>
+      <p>"Dear valued passenger, welcome aboard! We are delighted to have you on our flight. Sit back, relax, and enjoy a pleasant journey with us. Thank you for choosing our airline. Safe travels!"</p>
+      <div className="ticket-info">
+  <table className="flight-info-table">
+    <tbody>
+      <tr>
+        <th>Flight ID</th>
+        <td>{flight_id}</td>
+      </tr>
+      <tr>
+        <th>PNR Number</th>
+        <td>{_id}</td>
+      </tr>
+      <tr>
+        <th>Journey Date</th>
+        <td>{journeyDate}</td>
+      </tr>
+      <tr>
+        <th>Journey Time</th>
+        <td>{journeyTime}</td>
+      </tr>
+      <tr>
+        <th>Arrival Time</th>
+        <td>{arrivalTime}</td>
+      </tr>
+      <tr>
+        <th>Duration</th>
+        <td>{hour} hours</td>
+      </tr>
+      <tr>
+        <th>Flight Type</th>
+        <td>{flightType}</td>
+      </tr>
+      <tr>
+        <th>Flight Class</th>
+        <td>{flightClass}</td>
+      </tr>
+      <tr>
+              <th>Total Adult Fare</th>
+              <td>{totalAdultFare}</td>
+            </tr>
+            <tr>
+              <th>Total Child Fare</th>
+              <td>{totalChildFare}</td>
+            </tr>
+            <tr>
+              <th>Total Fare</th>
+              <td>{totalFare}</td>
+            </tr>
+    </tbody>
+  </table>
+</div>
 
-      <Typography variant="h6" style={{ marginTop: '10px' }}>
-        Passengers:
-      </Typography>
+<Typography variant="h6" style={{ marginTop: '10px' }}>
+  Passengers:
+</Typography>
 
-      <List>
-        {passengers &&
-          passengers.map((passenger, index) => (
-            <ListItem key={index}>
-              <ListItemText
-                primary={`Passenger ${index + 1}`}
-                secondary={
-                  <>
-                    <Typography>Name: {passenger.fullName}</Typography>
-                    <Typography>Age: {passenger.age}</Typography>
-                    <Typography>Email: {passenger.email}</Typography>
-                    <Typography>Phone: {passenger.phone}</Typography>
-                    <Typography>Gender: {passenger.gender}</Typography>
-                  </>
-                }
-              />
-            </ListItem>
-          ))}
-      </List>
+<div className="passenger-list">
+  {passengers && passengers.length > 0 && (
+    <table className="passenger-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Gender</th>
+        </tr>
+      </thead>
+      <tbody>
+        {passengers.map((passenger, index) => (
+          <tr key={index}>
+            <td>{passenger.fullName}</td>
+            <td>{passenger.age}</td>
+            <td>{passenger.email}</td>
+            <td>{passenger.phone}</td>
+            <td>{passenger.gender}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  )}
+  {(!passengers || passengers.length === 0) && <div>No passenger data available</div>}
+</div>
+<br></br>
+
+<p><b>Rinor Traval Agency</b><br></br>
+Terms & Conditions<br></br>
+
+Dear Valued Customer,<br></br>
+
+Thank you for choosing [Rinor Traval Agency]. Please be advised of our cancellation policy. In the event of a cancellation, a 30% deduction will be applied to cover processing fees. We appreciate your understanding and look forward to serving you on your next journey.
+
+Safe travels,
+<br></br>
+<b>[Rinor Team]</b></p>
     </Paper>
   );
+  
 }
 
 export default PDF;

@@ -46,6 +46,12 @@ const Home = () => {
     <br></br>
     <br></br>
     <Support/>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
     <Travelers/>
     <Info/>
     <Lounge/>

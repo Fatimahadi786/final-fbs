@@ -20,10 +20,10 @@ function Dashboard() {
                 </a>
             </div>
             <div className="row">
-                <Card title="Earnings(Monthly)" value="$40,000" color="primary" />
-                <Card title="Earnings(Annual)" value="$215,000" color="success" />
-                <Card title="Tasks" value="50%" color="info" />
-                <Card title="Pending Requests" value="18" color="warning" />
+                <Card title="Flight Types(PIA,AIRBLUE)" value="2" color="primary" />
+                <Card title="Seat Availabity(business(max=5), economy(max=5))" value="10" color="success" />
+                <Card title="Booking Seat" value="3" color="info" />
+                <Card title="Available Seat" value="7" color="warning" />
             </div>
             <div className='row'>
                 <div className='col-xl-4 col-lg-5'>

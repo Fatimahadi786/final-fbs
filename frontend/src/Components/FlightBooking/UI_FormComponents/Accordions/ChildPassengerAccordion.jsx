@@ -64,7 +64,7 @@ function ChildPassengerDetailAccordion({ title, subtitle, index }) {
               }}
             />
              <Field
-      name={`${index}.gender`}
+      name={`children.${index}.gender`}
       as={TextField}
       label="Gender"
       variant="outlined"
